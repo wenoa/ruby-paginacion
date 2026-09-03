@@ -5,8 +5,10 @@ gemspec
 group(:development) {
   gem "rack-test"
   gem "rake", "~> 13.0"
+  gem "rbs", "~> 4.2"
   gem "rspec", "~> 3.13"
   gem "rubocop", "~> 1.87.0"
   gem "simplecov", "~> 0.22.0"
   gem "simplecov-console", "~> 0.9.5"
+  gem "steep", "~> 2.0"
 }

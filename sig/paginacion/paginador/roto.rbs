@@ -1,0 +1,6 @@
+module Paginacion
+  class Paginador
+    class Roto < Paginador
+    end
+  end
+end

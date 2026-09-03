@@ -1,0 +1,5 @@
+module Paginacion
+  def self.paginador_estandar: (numero: Integer, tamaño: Integer) -> Paginador::Estandar
+
+  def self.paginador_roto: () -> Paginador::Roto
+end

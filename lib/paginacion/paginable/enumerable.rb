@@ -1,6 +1,6 @@
 module Paginacion
-  module Paginable
-    class Enumerable < Base
+  class Paginable
+    class Enumerable < Paginable
       class << self
         def para?(coleccion)
           coleccion.respond_to?(:size) && coleccion.respond_to?(:slice)

@@ -1,6 +1,6 @@
 module Paginacion
-  module Paginable
-    class Criteria < Base
+  class Paginable
+    class Criteria < Paginable
       class << self
         def para?(coleccion)
           coleccion.respond_to?(:skip) && coleccion.respond_to?(:limit)

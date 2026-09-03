@@ -1,0 +1,5 @@
+module Paginacion
+  class Paginador
+    def paginar: [T] (Paginable::coleccion[T] coleccion, ?Hash[Symbol, Object] metadata) -> Pagina[T]
+  end
+end

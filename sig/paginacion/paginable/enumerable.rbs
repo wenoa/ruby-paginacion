@@ -1,0 +1,6 @@
+module Paginacion
+  class Paginable[C, T]
+    class Enumerable[T] < Paginable[_Enumerable[T], T]
+    end
+  end
+end

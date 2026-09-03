@@ -1,0 +1,28 @@
+module Paginacion
+  class Pagina[T]
+    @items: Array[T]
+    @total: Integer
+    @metadata: Hash[Symbol, Object]
+
+    def self.individual: [T] (Array[T] items) -> Pagina[T]
+
+    attr_reader total: Integer
+
+    attr_reader metadata: Hash[Symbol, Object]
+
+    def initialize: (items: Array[T], total: Integer, metadata: Hash[Symbol, Object]) -> void
+
+    def ==: (Object otra) -> bool
+
+    def transformar: [U] () { (T) -> U } -> Pagina[U]
+
+    def []: (Integer indice) -> T?
+
+    def to_a: () -> Array[T]
+
+    def vacia?: () -> bool
+
+    # Protegido: RBS no puede expresar esa visibilidad.
+    attr_reader items: Array[T]
+  end
+end

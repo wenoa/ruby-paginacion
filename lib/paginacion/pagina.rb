@@ -15,7 +15,7 @@ module Paginacion
     end
 
     def ==(otra)
-      is_a?(otra.class) &&
+      otra.is_a?(self.class) &&
         items == otra.items &&
         total == otra.total &&
         metadata == otra.metadata

@@ -1,6 +1,6 @@
 module Paginacion
-  module Paginador
-    class Estandar < Base
+  class Paginador
+    class Estandar < Paginador
       class << self
         def para_pagina(numero:, tamaño:)
           new(numero:, tamaño:)
@@ -10,7 +10,7 @@ module Paginacion
       end
 
       def paginar(coleccion, metadata = {})
-        paginable = Paginable::Base.para(coleccion)
+        paginable = Paginable.para(coleccion)
         Pagina.new(
           items: paginable.seleccionar(desde: @tamaño * (@numero - 1), cantidad: @tamaño),
           total: paginable.total,

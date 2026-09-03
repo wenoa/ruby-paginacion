@@ -1,0 +1,39 @@
+module Paginacion
+  class Paginable[C, T]
+    interface _Enumerable[T]
+      def respond_to?: (interned name, ?boolish include_all) -> bool
+
+      def size: () -> Integer
+
+      def slice: (Integer desde, Integer cantidad) -> Array[T]?
+    end
+
+    interface _Criteria[T]
+      def respond_to?: (interned name, ?boolish include_all) -> bool
+
+      def size: () -> Integer
+
+      def skip: (Integer cantidad) -> self
+
+      def limit: (Integer cantidad) -> self
+
+      def to_a: () -> Array[T]
+    end
+
+    type coleccion[T] = _Enumerable[T] | _Criteria[T]
+
+    @coleccion: C
+
+    def self.subclasses: () -> Array[singleton(Paginable)]
+
+    def self.para: [T] (coleccion[T] coleccion) -> Paginable[coleccion[T], T]
+
+    def self.para?: [T] (coleccion[T] coleccion) -> bool
+
+    def initialize: (C coleccion) -> void
+
+    def total: () -> Integer
+
+    def seleccionar: (desde: Integer, cantidad: Integer) -> Array[T]
+  end
+end

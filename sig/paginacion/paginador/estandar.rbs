@@ -1,0 +1,14 @@
+module Paginacion
+  class Paginador
+    class Estandar < Paginador
+      @numero: Integer
+      @tamaño: Integer
+
+      def self.para_pagina: (numero: Integer, tamaño: Integer) -> Estandar
+
+      private
+
+      def initialize: (numero: Integer, tamaño: Integer) -> void
+    end
+  end
+end

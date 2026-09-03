@@ -4,6 +4,8 @@ require "simplecov-console"
 
 task(:format) { sh "rubocop -A" }
 
+task(:typecheck) { sh "steep check" }
+
 task(:test) {
   FileUtils.rmtree("coverage")
   sh "COVERAGE=true rspec --format=documentation"
@@ -20,4 +22,4 @@ task(:check_coverage) {
   }
 }
 
-task default: [:format, :test, :check_coverage]
+task default: [:format, :typecheck, :test, :check_coverage]

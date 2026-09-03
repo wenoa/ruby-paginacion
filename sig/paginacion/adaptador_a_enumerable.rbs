@@ -1,0 +1,10 @@
+module Paginacion
+  class AdaptadorAEnumerable[T]
+    include Paginable::_Enumerable[T]
+
+    @size: ^() -> Integer
+    @slice: ^(Integer desde, Integer cantidad) -> Array[T]?
+
+    def initialize: (size: ^() -> Integer, slice: ^(Integer desde, Integer cantidad) -> Array[T]?) -> void
+  end
+end
