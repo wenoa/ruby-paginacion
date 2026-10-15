@@ -14,6 +14,10 @@ module Paginacion
       def seleccionar(desde:, cantidad:)
         @coleccion.slice(desde, cantidad) || []
       end
+
+      def todos
+        seleccionar(desde: 0, cantidad: total)
+      end
     end
   end
 end

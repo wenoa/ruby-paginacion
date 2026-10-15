@@ -14,6 +14,10 @@ module Paginacion
       def seleccionar(desde:, cantidad:)
         @coleccion.skip(desde).limit(cantidad).to_a
       end
+
+      def todos
+        @coleccion.to_a
+      end
     end
   end
 end

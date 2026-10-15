@@ -5,7 +5,7 @@ module Paginacion
         paginable = Paginable.para(coleccion)
         total = paginable.total
         Pagina.new(
-          items: paginable.seleccionar(desde: 0, cantidad: total),
+          items: paginable.todos,
           total:,
           metadata:,
         )

@@ -24,6 +24,10 @@ module Paginacion
     def seleccionar(desde:, cantidad:)
       raise NotImplementedError
     end
+
+    def todos
+      raise NotImplementedError
+    end
     # :nocov:
   end
 end

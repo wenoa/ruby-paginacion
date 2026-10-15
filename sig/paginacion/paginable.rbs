@@ -35,5 +35,7 @@ module Paginacion
     def total: () -> Integer
 
     def seleccionar: (desde: Integer, cantidad: Integer) -> Array[T]
+
+    def todos: () -> Array[T]
   end
 end
